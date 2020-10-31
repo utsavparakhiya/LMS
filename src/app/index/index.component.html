@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Library Management System</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background-color:white">
+
+  <div id="bdy">
+    <div id="content">
+      <div class="jumbotron text-center shadow p-4  text-white h-100" style="background-color:#795548;">
+        <h2 class="display-4" style="font-family: monospace;text-transform: capitalize;">Online Library System</h2>
+        <h4>Place to issue and renew books online</h4>
+      </div>
+
+      <div class="myDiv  container  my-auto col-sm-3 align-middle pb-2">
+        <div class="form-group pt-4">
+          <input type="text" class="form-control" #usr placeholder="Username" value="18CEUOG035">
+
+          <input type="password" class="form-control" #psd placeholder="Password" value="Utsav1234">
+
+
+          <button (click)="check(usr.value,psd.value)" class="btn">Log In</button>
+        </div>
+
+        <p *ngIf="valid == false">*Incorrect Username/Password</p>
+      </div>
+    </div>
+
+
+    <footer id="footer">
+      <p>Copyright © 2020</p>
+      <p>Contact Utsav Parakhiya : +919726247049</p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

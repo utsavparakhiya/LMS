@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Heme</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background-color: #fffffe;">
+
+    <div id="bdy">
+        <div id="content">
+
+            <app-header></app-header>
+
+            <h1 class="ml-4 mt-4">STUDENT PROFILE</h1>
+
+            <table class="table tbl w-50 table-bordered ml-4 mt-3 shadow table-striped  ">
+                <tbody>
+                    <tr>
+                        <th>REGISTRATION DATE </th>
+                        <td>{{dateOfRegistration | date}}</td>
+                    </tr>
+                    <tr>
+                        <th>NAME </th>
+                        <td>{{name | uppercase}}</td>
+                    </tr>
+                    <tr>
+                        <th>STUDENT ID </th>
+                        <td>{{studentId | uppercase}}</td>
+                    </tr>
+                    <tr>
+                        <th>GENDER </th>
+                        <td>{{gender | uppercase}}</td>
+                    </tr>
+                    <tr>
+                        <th>EMAIL ID</th>
+                        <td>{{emailId}}</td>
+                    </tr>
+                    <tr>
+                        <th>MOBILE NO </th>
+                        <td>{{phoneNumber}}</td>
+                    </tr>
+                    <tr>
+                        <th>ISSUED BOOKS </th>
+                        <td>{{issuedBooks}}</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+
+    
+
+
+    <!-- <router-outlet></router-outlet> -->
+
+</body>
+
+</html>

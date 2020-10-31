@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Renew Book</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="bdy">
+        <div id="content">
+
+            <app-header></app-header>
+
+            <div class="container col-sm-5 mt-5 border shadow"
+                style="background-color: whitesmoke;box-shadow: 1px 1px 20px lightgray;">
+                <h1 class="mt-4">Renew Book</h1>
+
+                <!-- <form action="#" name="myForm"> -->
+
+                    <div class="form-group">
+                        <input type="text" class="form-control mt-4" placeholder="Book ID" name="bookid" #bkid value="BBDFA0T196" required />
+                  
+                        <input type="button" (click)="onSubmit(bkid.value)" class="sbt_btn pt-2 pb-2 pl-3 pr-3" id="sbmt" value="Renew Book">
+
+                        
+                    </div>
+
+                    <p *ngIf="invalid == true" class="msg">*You have not issued such book!</p>
+
+                    <p *ngIf="bookRenewed == true" class="msg">Your new Return date is {{newReturnDate | date}}</p>
+                <!-- </form> -->
+            </div>
+
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+</body>
+
+</html>

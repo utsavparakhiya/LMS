@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>Register New Book</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div id="bdy">
+        <div id="content">
+
+        
+    <app-header></app-header>
+        <div class="container col-sm-5 mt-5 border shadow" style="background-color: whitesmoke;box-shadow: 1px 1px 20px lightgray;">
+            <h1 class="mt-4">Return Book</h1>
+    
+            <form action="#" name="myForm" (ngSubmit)="returnBook(stdid.value,bkid.value)" ngNativeValidate>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control mt-4" placeholder="Book ID" #bkid value="BBDFA0T196" required />
+                <!-- </div> -->
+                <!-- <div class="form-group"> -->
+                    <input type="text" class="form-control mt-4" placeholder="Student ID" #stdid value="20SZRANNHQ" required /> 
+                    
+                <!-- </div> -->
+                <!-- <div class="form-group">             -->
+                    <input type="submit" class="sbt_btn pt-2 pb-2 pl-3 pr-3" value="Return Book">
+                  
+                    <p class="msg"><br>{{msg}}</p>
+                </div>
+            </form>
+        </div>
+    
+
+    </div>
+
+    <app-footer></app-footer>
+</div>
+
+</body>
+
+</html>

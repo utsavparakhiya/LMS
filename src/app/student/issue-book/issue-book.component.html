@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Issuebook</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <div id="bdy">
+
+    <div id="content">
+
+      <app-header></app-header>
+
+      <template #dynamicLoadComponent></template>
+
+
+      <div class="container col-sm-5 mt-5 border" id="books"
+        style="background-color: whitesmoke;box-shadow: 1px 1px 20px  lightgrey;">
+
+          <h1 class="mt-4">Issue Book</h1>
+
+          <div class="form-group">
+            <input type="text" #booknm class="form-control mt-4" id="book_nm" name="booknm" value="Algorithms"
+              placeholder="Book Title">
+
+            <input type="button" (click)="check(booknm.value)" class="sbt_btn pt-2 pb-2 pl-3 pr-3" id="sbmt" value="Search">
+          </div>
+
+          <p class="msg"><b>{{msg}}</b></p>
+      </div>
+
+      
+
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p class="text-center">Are you sure to issue this book ?</p>
+            </div>
+            <div class="modal-footer border-0 mx-auto">
+              <button type="button" (click)="issue()" class="btn btn-primary" id="issue" data-dismiss="modal">Yes</button>
+              <button type="button" class="btn btn-secondary" id="reject" data-dismiss="modal">No</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+    
+    <app-footer></app-footer>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+h1 {
+background-color: #795548;
+color: whitesmoke;
+font-family: "Segoe UI", Arial, sans-serif;
+font-weight: 400;
+padding: 15px;
+}
+
+.form-control {
+    border: none;
+    color: #795548;
+    border-bottom: 0.5px solid #795548;
+    background: transparent;
+    outline: none;
+    font-family: 'Lucida Sans', sans-serif;
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.msg{
+    border: none;
+    color: #795548;
+    background: transparent;
+    text-align: center;
+    align-content: center;
+    outline: none;
+    font-family: 'Lucida Sans', sans-serif;
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+
+.form-control:hover{
+        box-shadow: 1px 1px 10px gray;
+        cursor: pointer;
+    }
+
+.sbt_btn {
+    background-color: #795548;
+    color: white;
+    font-family: 'Lucida Sans', sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    border: #795548;
+}
+
+.sbt_btn:hover,[type=text]:hover{
+    box-shadow: 1px 1px 10px grey;
+    cursor: pointer;
+}
+
+#content{
+    padding-bottom: 10rem;   
+}
+
+#bdy{
+    position: relative;
+    min-height: 100vh;
+}

@@ -1,0 +1,7 @@
+<div *ngFor="let book of books,index as i" class="container card col-sm-5 mt-5 shadow border">
+    <div class="card-body">
+        <span class="card-text">{{book}}</span>
+        <!-- <a class="sbt_btn rounded pt-2 pb-2 pl-3 pr-3" data-toggle="modal" data-target="#myModal" routerLink="issueBook/{{book}}">Issue</a> -->
+        <button class="sbt_btn rounded pt-2 pb-2 pl-3 pr-3" data-toggle="modal" (click)="f(i)" data-target="#myModal">Issue</button>
+    </div>
+</div>  

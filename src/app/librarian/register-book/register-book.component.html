@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Register New Book</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div id="bdy">
+        <div id="content">
+
+            <app-header></app-header>
+
+
+            <div class="container col-sm-5 mt-5 border shadow"
+                style="background-color: whitesmoke;box-shadow: 1px 1px 20px lightgray;">
+                <h1 class="mt-4">Book Details</h1>
+
+                <form action="#" name="myForm" (ngSubmit)="onSubmit()" ngNativeValidate>
+
+                    <div class="form-group">
+                        <input [(ngModel)]='bookNm' type="text" class="form-control mt-4" placeholder="Book Name" name="title" required />
+                        <input [(ngModel)]='isbnNo' type="text" class="form-control mt-4" placeholder="ISBN no" name="isbn" required />
+                        <input [(ngModel)]='publisher' type="text" class="form-control mt-4" placeholder="Publisher" name="publisher"
+                            required />
+                        <input [(ngModel)]='author1' type="text" class="form-control mt-4" placeholder="Author1" name="author1" required />
+                        <input [(ngModel)]='author2' type="text" class="form-control mt-4" placeholder="Author2 (Optional)" name="author2" />
+                        <input [(ngModel)]='author3' type="text" class="form-control mt-4" placeholder="Author3 (Optional)" name="author3" />
+                        <input [(ngModel)]='price' type="number" class="form-control mt-4" placeholder="Price" name="price" required/>
+                        <input [(ngModel)]='numberOfCopies' type="number" class="form-control mt-4" placeholder="Number of copies" name="numberOfCopies" required/>
+                        <input type="submit" class="sbt_btn pt-2 pb-2 pl-3 pr-3" value="Register">
+                    </div>
+
+
+                </form>
+
+                <p class="msg"><b>{{msg}}</b></p>
+            </div>
+
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+
+</body>
+
+</html>

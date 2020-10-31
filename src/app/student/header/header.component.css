@@ -1,0 +1,9 @@
+.nav-link{
+    color: #ffffff;
+}
+
+.nav-link:hover{
+    color: whitesmoke;
+    font-size: large;
+    cursor: pointer;
+}
