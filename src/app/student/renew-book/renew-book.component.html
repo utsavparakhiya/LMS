@@ -18,19 +18,15 @@
                 style="background-color: whitesmoke;box-shadow: 1px 1px 20px lightgray;">
                 <h1 class="mt-4">Renew Book</h1>
 
-                <!-- <form action="#" name="myForm"> -->
+                <!-- <form action="#" name="myForm" (ngSubmit)="onSubmit(bkid.value)" ngNativeValidate> -->
 
                     <div class="form-group">
                         <input type="text" class="form-control mt-4" placeholder="Book ID" name="bookid" #bkid value="BBDFA0T196" required />
                   
-                        <input type="button" (click)="onSubmit(bkid.value)" class="sbt_btn pt-2 pb-2 pl-3 pr-3" id="sbmt" value="Renew Book">
+                        <input type="button" (click)="onSubmit(bkid.value)" class="sbt_btn pt-2 pb-2 pl-3 pr-3" value="Renew Book">
 
                         
                     </div>
-
-                    <p *ngIf="invalid == true" class="msg">*You have not issued such book!</p>
-
-                    <p *ngIf="bookRenewed == true" class="msg">Your new Return date is {{newReturnDate | date}}</p>
                 <!-- </form> -->
             </div>
 

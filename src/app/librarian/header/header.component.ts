@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
 
   logout()
   {
-    this.cookie.deleteAll();
+    this.cookie.delete("userID","/");
   }
 
 }

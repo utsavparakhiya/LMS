@@ -31,8 +31,9 @@ export class StudentHomeComponent implements OnInit {
           this.phoneNumber = s.phoneNumber;
           this.gender=s.gender;
           this.studentId=s.studentId;
-          this.issuedBooks=s.issuedBooks;
+          this.issuedBooks=Number(s.issuedBooks);
           this.emailId=s.emailId;
+          break;
         }
       }
     });

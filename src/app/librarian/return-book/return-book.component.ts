@@ -27,9 +27,10 @@ export class ReturnBookComponent implements OnInit {
           console.log("Ssmnamsk");
           found = true;
           this.service.returnIssuedBooks(book).subscribe(res => { });
+          this.service.updateReturnedBook(book).subscribe(res => { });
           break;
         }
-
+        console.log(book.bookId);
       }
       if (found == false) {
         this.msg = "Incorrect Book ID / Student ID";

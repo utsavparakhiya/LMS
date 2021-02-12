@@ -15,6 +15,7 @@ export class IndexComponent implements OnInit {
   constructor(private router: Router, private cookie: CookieService, private service: DataServiceService) { }
 
   ngOnInit(): void {
+    console.log(this.cookie.get("userID"));
   }
 
   check(usr: string, pswd: string) {
@@ -27,6 +28,9 @@ export class IndexComponent implements OnInit {
     this.valid = true;
     this.service.getStudent().subscribe(res => {
       this.students = res;
+
+      console.log(usr);
+      console.log(pswd);
 
       for (var s of this.students) {
         if (s.studentId == usr && s.password == pswd) {

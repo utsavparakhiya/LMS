@@ -20,9 +20,12 @@ export class RenewBookComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(bookId) {
+  onSubmit(bookId:String) {
+    console.log(bookId);
     var renewed = false;
+    console.log("sasa");
     this.service.getIssuedBooks().subscribe(res => {
+      console.log("hello");
       this.books = res;
       console.log(this.books);
       console.log("A");
@@ -31,9 +34,11 @@ export class RenewBookComponent implements OnInit {
       for (var book of this.books) {
         if (book.bookId == bookId) {
           renewed = true;
+          console.log("ksjdskdsjk");
           this.service.updateIssuedBooks(book).subscribe(res => { });
           break;
         }
+        console.log(book.bookId);
       }
 
       if (renewed == false)
@@ -52,6 +57,8 @@ export class RenewBookComponent implements OnInit {
 
     
     });
+
+    console.log("mkska");
 
   }
 

@@ -24,9 +24,7 @@ export class IssueBookComponent implements OnInit {
 
   constructor(private resolver: ComponentFactoryResolver, private service: DataServiceService,private bookService: BookServiceService,private cookie : CookieService,private router: Router) {
     this.bookService = bookService;
-    // this.visible = false;
-    this.msg = cookie.get("msg");
-    cookie.delete("msg");
+    this.msg="";
   }
 
   createComponent() {
@@ -38,7 +36,7 @@ export class IssueBookComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.visible);
+    console.log(this.cookie.get("booksIssued") + "A");
   }
   
   
@@ -79,20 +77,19 @@ export class IssueBookComponent implements OnInit {
   data : issuedBooksDetails
   issue() {
     console.log("YES");
+    var date = new Date();
+    date = new Date(date.setDate(date.getDate() + 15));
     this.data = {
       "bookNm": this.cookie.get("bookNm"),
       "studentId":  this.cookie.get("userID"),
       "bookId": 'BB' + Math.random().toString(36).substr(2, 8).toUpperCase(),
       "issueDate": new Date(),
-      "returnDate": new Date(),
+      "returnDate": date,
       "returned": false,
     }
     this.service.registerIssuedBooks(this.data).subscribe(res => { });
     console.log(this.data);
-
-    this.cookie.set("msg","Book has been issued successfully",50000);
-
-    this.visible=true;
+    this.msg="Book has been issued successfully";
 
     // window.location.reload();
 
