@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>issuebook</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div id="bdy">
+        <div id="content">
+
+            <app-header></app-header>
+            <div class="container col-sm-5 mt-5 border shadow"
+                style="background-color: whitesmoke;box-shadow: 1px 1px 20px lightgray;">
+
+                <div class="form-group">
+                    <div class="box">
+                        <div class="top">
+                          <h1>Ask Your Questions ??</h1>
+                        </div>
+                        <div class="mid">
+                          <div class="chat">
+                            <h2>Answers For your Questions are below ...</h2>
+                            <p id="chatLog"> Let's Chat </p>
+                          </div>
+                        </div>
+                        <div class="input">
+                          <input type="text" id="userBox" onkeydown="if(event.keyCode == 13){ talk()}" placeholder="Type your Question">
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+
+    <script>
+        function talk() {
+            var know = {
+                "hi": "hello, how can i help you?",
+                "how can i renewbook?": "Go to renewbook page and submit form.",
+                "": "",
+                "": "",
+                "": ""
+            };
+            var user = document.getElementById('userBox').value;
+            document.getElementById('chatLog').innerHTML = user + "<br>";
+            if (user in know) {
+                document.getElementById('chatLog').innerHTML = know[user] + "<br>";
+            } else {
+                document.getElementById('chatLog').innerHTML = "Sorry,I didn't understand <br>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

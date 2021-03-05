@@ -1,3 +1,5 @@
+import { ChatbotComponent } from './student/chatbot/chatbot.component';
+import { FeedbackComponent } from './student/feedback/feedback.component';
 import { ContactusComponent } from './student/contactus/contactus.component';
 import { AboutusComponent } from './student/aboutus/aboutus.component';
 
@@ -25,6 +27,8 @@ const routes: Routes = [
   { path: 'librarian/returnBook', component: ReturnBookComponent},
   { path: 'student/aboutus', component: AboutusComponent},
   { path: 'student/contactus', component: ContactusComponent},
+  { path: 'student/feedback', component: FeedbackComponent},
+  { path: 'student/chatbot', component: ChatbotComponent},
 ];
 
 @NgModule({

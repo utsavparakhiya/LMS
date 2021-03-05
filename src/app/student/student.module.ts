@@ -9,9 +9,11 @@ import { RenewBookComponent } from './renew-book/renew-book.component';
 import { AddBooksComponent } from './add-books/add-books.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 @NgModule({
-  declarations: [HeaderComponent, StudentHomeComponent, IssueBookComponent, RenewBookComponent, AddBooksComponent, FooterComponent, ContactusComponent, AboutusComponent],
+  declarations: [HeaderComponent, StudentHomeComponent, IssueBookComponent, RenewBookComponent, AddBooksComponent, FooterComponent, ContactusComponent, AboutusComponent, FeedbackComponent, ChatbotComponent],
   imports: [
     CommonModule,
     RouterModule,
