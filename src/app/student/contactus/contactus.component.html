@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>issuebook</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div id="bdy">
+        <div id="content">
+
+            <app-header></app-header>
+
+            <div class="container col-sm-5 mt-5 border shadow"
+                style="background-color: whitesmoke;box-shadow: 1px 1px 20px lightgray;">
+                <h1 class="mt-4">Contact Us</h1>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control mt-4" placeholder="Name" name="nm"  value="" required />
+                        <input type="email" class="form-control mt-4" placeholder="Email" name="email"  value="" required />
+                        <input type="text" class="form-control mt-4" placeholder="Phone Number" name="phonenum"  value="" required />
+                        <input type="text" class="form-control mt-4" placeholder="Message" name="msg"  value="" required />
+                  
+                        <input type="button" class="sbt_btn pt-2 pb-2 pl-3 pr-3" value="Send Message">
+
+                    </div>
+            </div>
+        </div>
+
+        <app-footer></app-footer>
+    </div>
+
+</body>
+
+</html>

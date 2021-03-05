@@ -1,3 +1,5 @@
+import { ContactusComponent } from './student/contactus/contactus.component';
+import { AboutusComponent } from './student/aboutus/aboutus.component';
 
 import { ReturnBookComponent } from './librarian/return-book/return-book.component';
 import { RemoveUserComponent } from './librarian/remove-user/remove-user.component';
@@ -20,7 +22,9 @@ const routes: Routes = [
   { path: 'librarian/registerBook', component: RegisterBookComponent},
   { path: 'librarian/registerUser', component: RegisterUserComponent},
   { path: 'librarian/removeUser', component: RemoveUserComponent},
-  { path: 'librarian/returnBook', component: ReturnBookComponent}
+  { path: 'librarian/returnBook', component: ReturnBookComponent},
+  { path: 'student/aboutus', component: AboutusComponent},
+  { path: 'student/contactus', component: ContactusComponent},
 ];
 
 @NgModule({
