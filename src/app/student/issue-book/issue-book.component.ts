@@ -5,6 +5,7 @@ import { Component, ComponentFactoryResolver, ComponentRef, OnInit, NgModule, Vi
 import { AddBooksComponent } from '../add-books/add-books.component';
 import { BookServiceService } from '../book-service.service';
 import { CookieService } from 'ngx-cookie-service';
+// import { toInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
 
 @Component({
   selector: 'app-issue-book',
@@ -77,6 +78,16 @@ export class IssueBookComponent implements OnInit {
   data : issuedBooksDetails
   issue() {
     console.log("YES");
+
+    var ib = Number(this.cookie.get("booksIssued"));
+
+    if(ib > 2)
+    {
+      console.log(Number(ib));
+      this.msg="You have reached max limit";
+      return;
+    }
+
     var date = new Date();
     date = new Date(date.setDate(date.getDate() + 15));
     this.data = {
@@ -90,6 +101,7 @@ export class IssueBookComponent implements OnInit {
     this.service.registerIssuedBooks(this.data).subscribe(res => { });
     console.log(this.data);
     this.msg="Book has been issued successfully";
+    this.cookie.set("booksIssued", ib + 1 + "", 50000);
 
     // window.location.reload();
 

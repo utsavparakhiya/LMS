@@ -12,6 +12,7 @@ export class RenewBookComponent implements OnInit {
 
   books: any[];
   invalid = false;
+  msg = "";
   bookRenewed = false;
   newReturnDate : Date;
 
@@ -45,13 +46,15 @@ export class RenewBookComponent implements OnInit {
       {
         this.bookRenewed = false;
         this.invalid = true;
+        this.msg="No such book found";
       }
       else
       {
         this.newReturnDate = new Date();
-        this.newReturnDate = new Date(this.newReturnDate.setDate(this.newReturnDate.getDate() + 15));
+        this.newReturnDate = new Date(this.newReturnDate.setDate(this.newReturnDate.getDate() + 20));
         this.invalid = false;
         this.bookRenewed = true;
+        this.msg="Your new date for renew is " + this.newReturnDate.getDate() + "/" + (Number(this.newReturnDate.getMonth())+1) + "/" + this.newReturnDate.getFullYear();
       }
 
 

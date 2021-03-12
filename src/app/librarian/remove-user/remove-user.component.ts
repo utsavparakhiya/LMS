@@ -26,9 +26,15 @@ export class RemoveUserComponent implements OnInit {
 
       for (var s of this.students) {
         if (s.studentId == stdId) {
+          if(s.issuedBooks != "0")
+          {
+            this.msg = "Student has not returned all the books";
+            this.found = true;
+            break;  
+          }
           this.service.deleteStudent(stdId).subscribe(res => { });
           this.msg = "Student has been removed successfully";
-          this.found = true;
+          
           break;
         }
       }
