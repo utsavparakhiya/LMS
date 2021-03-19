@@ -15,6 +15,12 @@ export class StudentHomeComponent implements OnInit {
   book1: String;
   book2: String;
   book3: String;
+  id1: String;
+  id2: String;
+  id3: String;
+  returnDate1 : String;
+  returnDate2 : String;
+  returnDate3 : String;
   name: String;
   dateOfRegistration: Date;
   phoneNumber: String;
@@ -65,15 +71,21 @@ export class StudentHomeComponent implements OnInit {
         console.log(i);
         if (b.studentId == this.cookie.get("userID")) {
           if (i == 1) {
-            this.book1 = b.bookNm;
+            this.book1 = "Book Name : " + b.bookNm;
+            this.id1 = ", Book Id : " + b.bookId + ", Return Date : ";
+            this.returnDate1 = b.returnDate;
           }
 
           if (i == 2) {
-            this.book2 = b.bookNm;
+            this.book2 = "Book Name : " + b.bookNm;
+            this.id2 = ", Book Id : " + b.bookId + ", Return Date : ";
+            this.returnDate2 = b.returnDate;
           }
 
           if (i == 3) {
-            this.book3 = b.bookNm;
+            this.book3 = "Book Name : " + b.bookNm;
+            this.id3 = ", Book Id : " + b.bookId + ", Return Date : ";
+            this.returnDate3 = b.returnDate;
           }
 
           i++;
