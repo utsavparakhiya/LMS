@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div id="bdy">
+
+        <div id="content">
+
+
+            <app-header></app-header>
+
+            <table class="table tbl w-50 table-bordered ml-4 mt-3 shadow table-striped  ">
+                    <tr>
+                    <th>Student Name</th>
+                    <th>Student ID</th>
+                    <th>Date of Registration</th>
+                    <th>Books Issued</th>
+                    </tr>
+                
+                <tr *ngFor = "let a of student">
+                    <td>{{a.name}}</td>
+                    <td>{{a.studentId}}</td>
+                    <td>{{a.dateOfRegistration | date}}</td>
+                    <td>{{a.issuedBooks}}</td>
+                </tr>
+                
+            </table>
+
+        </div>
+        
+        <app-footer></app-footer>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div id="bdy">
+
+        <div id="content">
+
+
+            <app-header></app-header>
+
+            <table class="table tbl w-50 table-bordered ml-4 mt-3 shadow table-striped  ">
+                    <tr>
+                    <th>Book Name</th>
+                    <th>Total Number Of Copies</th>
+                    <th>Number Of Copies Available</th>
+                    <th>Price</th>
+                    </tr>
+                
+                <tr *ngFor = "let a of books">
+                    <td>{{a.bookNm}}</td>
+                    <td>{{a.numberOfCopies}}</td>
+                    <td>{{a.available}}</td>
+                    <td>{{a.price}}</td>
+                </tr>
+                
+            </table>
+
+        </div>
+        
+        <app-footer></app-footer>
+
+    </div>
+
+
+</body>
+
+</html>

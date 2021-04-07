@@ -10,9 +10,11 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { RemoveUserComponent } from './remove-user/remove-user.component';
 import { ReturnBookComponent } from './return-book/return-book.component';
 import { FormsModule } from '@angular/forms';
+import { GetstudentsComponent } from './getstudents/getstudents.component';
+import { GetBooksComponent } from './get-books/get-books.component';
 
 @NgModule({
-  declarations: [HeaderComponent, LibrarianHomeComponent,FooterComponent, RegisterBookComponent, RegisterUserComponent, RemoveUserComponent, ReturnBookComponent],
+  declarations: [HeaderComponent, LibrarianHomeComponent,FooterComponent, RegisterBookComponent, RegisterUserComponent, RemoveUserComponent, ReturnBookComponent, GetstudentsComponent, GetBooksComponent],
   imports: [
     CommonModule,
     RouterModule,

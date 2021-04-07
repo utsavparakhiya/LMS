@@ -20,7 +20,7 @@ export class IndexComponent implements OnInit {
 
   check(usr: string, pswd: string) {
 
-    if (usr == "18CEUOG035" && pswd == "Utsav1234") {
+    if (usr == "123" && pswd == "123") {
       this.cookie.set("userID", usr, 50000);
       this.cookie.set("paswd", pswd, 50000);
       this.router.navigate(['/librarian/home']);

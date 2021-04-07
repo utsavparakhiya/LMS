@@ -1,3 +1,5 @@
+import { GetBooksComponent } from './librarian/get-books/get-books.component';
+import { GetstudentsComponent } from './librarian/getstudents/getstudents.component';
 import { ChatbotComponent } from './student/chatbot/chatbot.component';
 import { FeedbackComponent } from './student/feedback/feedback.component';
 import { ContactusComponent } from './student/contactus/contactus.component';
@@ -29,6 +31,8 @@ const routes: Routes = [
   { path: 'student/contactus', component: ContactusComponent},
   { path: 'student/feedback', component: FeedbackComponent},
   { path: 'student/chatbot', component: ChatbotComponent},
+  { path: 'librarian/registeredStudents', component: GetstudentsComponent},
+  { path: 'librarian/registeredBooks', component: GetBooksComponent},
 ];
 
 @NgModule({
